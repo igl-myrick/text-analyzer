@@ -66,3 +66,7 @@ const text = "Red! Red. I like red, green and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+Test: "It should filter out words based on a filter list."
+Code: filterOffensiveWords("test sentence zoinks")
+Expected output: "test sentence"

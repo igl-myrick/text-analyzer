@@ -24,3 +24,14 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+function filterOffensiveWords(text) {
+  const filterArray = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
+  const inputArray = text.toLowerCase().split(" ");
+  inputArray.forEach(function(element, index) {
+    if (filterArray.includes(element)) {
+      inputArray.splice(index, 1);
+    }
+  });
+  return inputArray.join(" ");
+};
