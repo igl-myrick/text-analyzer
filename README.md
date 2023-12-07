@@ -67,6 +67,10 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
+Test: "If an empty string is passed in as a word, it should return 0."
+
+Describe: filterOffensiveWords()
+
 Test: "It should filter out words based on a filter list."
 Code: filterOffensiveWords("test sentence zoinks")
 Expected output: "test sentence"
