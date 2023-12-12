@@ -87,3 +87,11 @@ function boldPassage(word, text) {
   });
   return p;
 }
+
+function countCommonWords(text) {
+  if (isEmpty(text)) {
+    return null;
+  }
+  const textArray = text.split(" ");
+  return textArray.join(" ");
+}

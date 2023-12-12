@@ -104,3 +104,17 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
+
+Describe: countCommonWords
+
+Test: "It should return 0 if an empty string is entered."
+Code: 
+const text = "";
+countCommonWords(text);
+Expected Output: null
+
+Test: "It should return the input as a string if valid text is entered."
+Code:
+const text = "test sentence abc"
+countCommonWords(text);
+Expected Output: "test sentence abc"
