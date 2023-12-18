@@ -1,3 +1,44 @@
+# _Text Analyzer Website_
+
+#### By _**India Lyon-Myrick**_
+
+#### _A text analyzing program._
+
+## Technologies Used
+
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+
+## Description
+
+_Input a paragraph and optionally a word. The website will output the number of words in the paragraph, the number of time each word appears, and optionally how many times a specific word appears, with each instance of it in bold._
+
+## Setup/Installation Requirements
+
+* _Clone the repository to a folder of choice on your machine (by either using the "Code" button on the GitHub page, or in a terminal application using `git clone https://github.com/igl-myrick/text-analyzer`)_
+* _Using a file explorer or terminal application, open the top level of the folder_
+* _Open index.html_
+
+## Known Bugs
+
+* _None at the moment_
+
+## License
+
+MIT:
+
+Copyright (c) _12/18/2023_ _India Lyon-Myrick_
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Tests
+
 Describe: wordCounter()
 
 Test: "It should return 1 if a passage has just one word."
