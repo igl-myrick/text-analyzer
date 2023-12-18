@@ -118,3 +118,9 @@ Code:
 const text = "test sentence abc"
 countCommonWords(text);
 Expected Output: "test sentence abc"
+
+Test: "It should count the number of repeating elements in an array."
+Code:
+const text = "test sentence abc sEnTeNcE"
+countCommonWords(text);
+Expected Output: "sentence: 2; abc: 1, test: 1"
