@@ -61,6 +61,7 @@ function handleFormSubmission(event) {
   } else {
     document.querySelector("div#bolded-passage").innerText = null;
   }
+  countCommonWords(passage);
 }
 
 window.addEventListener("load", function() {
@@ -92,6 +93,29 @@ function countCommonWords(text) {
   if (isEmpty(text)) {
     return null;
   }
-  const textArray = text.split(" ");
-  return textArray.join(" ");
+  const textArray = text.toLowerCase().split(" ").sort();
+  let wordCount = 1;
+  let counterArray = [];
+  textArray.forEach(function(element, index) {
+    if (element === textArray[index + 1]) {
+      wordCount++;
+    } else {
+      counterArray.push(element + "; " + wordCount);
+      wordCount = 1;
+    }
+  })
+  counterArray.sort(function(string1, string2) {
+    let string1Array = string1.split(" ");
+    let string2Array = string2.split(" ");
+    let a = parseInt(string1Array[1]);
+    let b = parseInt(string2Array[1]);
+    return b - a;
+  })
+  let ul = document.createElement("ul");
+  counterArray.forEach(function(element) {
+    let li = document.createElement("li");
+    li.append(element);
+    ul.append(li);
+  })
+  document.querySelector("div#common-word-count").append(ul);
 }
