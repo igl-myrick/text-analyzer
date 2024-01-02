@@ -1,7 +1,13 @@
 // utility logic
 
-function isEmpty(testString) {
-  return (testString.trim().length === 0) 
+function isEmpty() {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+    if (arguments[i].trim().length === 0) {
+      return true;
+    }
+  }
+  return false; 
 }
 
 // business logic
@@ -45,6 +51,17 @@ function filterOffensiveWords(text) {
   return inputArray.join(" ");
 };
 
+function firstInstanceOfWord(word, text) {
+  const textArray = text.split(" ");
+  for (let i = 0; i < textArray.length; i++) {
+    console.log(i);
+    if (word === textArray[i]) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 // ui logic
 
 function handleFormSubmission(event) {
@@ -62,6 +79,13 @@ function handleFormSubmission(event) {
     document.querySelector("div#bolded-passage").innerText = null;
   }
   countCommonWords(passage);
+  let firstInstance = firstInstanceOfWord(word, passage)
+  if (word) {
+    let p = document.createElement("p");
+    p.append("Your word appears " + (firstInstance + 1) + " words into the text.");
+    let wordCountDiv = document.getElementById("common-word-count");
+    wordCountDiv.append(p);
+  }
 }
 
 window.addEventListener("load", function() {
@@ -69,7 +93,7 @@ window.addEventListener("load", function() {
 });
 
 function boldPassage(word, text) {
-  if (isEmpty(word) || isEmpty(text)) {
+  if (isEmpty(word, text)) {
     return null;
   }
   const p = document.createElement("p");
